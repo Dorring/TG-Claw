@@ -1,7 +1,3 @@
-<div align="center">
-
-![CyberClaw Logo](docs/cyber_logo.png)
-
 # TG-Claw
 
 ###  **当 AI 开始"黑箱操作"，你需要一双透视眼**
