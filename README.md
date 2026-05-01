@@ -211,13 +211,11 @@ OPENAI_API_BASE=https://coding.dashscope.aliyuncs.com/v1
 tgclaw run
 ```
 
-![欢迎界面](docs/welcome.png)
 
 ### 4️⃣ 基本用法
 
 启动后进入交互式对话界面，如图所示：
 
-![聊天界面](docs/chat.png)
 
 **常用命令示例：**
 
@@ -261,8 +259,6 @@ TG-Claw 内置心跳任务系统（Heartbeat），自动在后台执行定时任
 ```bash
 tgclaw monitor
 ```
-
-![监控终端](docs/monitor.png)
 
 ---
 
