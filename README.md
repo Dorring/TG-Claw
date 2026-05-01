@@ -2,11 +2,11 @@
 
 ![CyberClaw Logo](docs/cyber_logo.png)
 
-# CyberClaw
+# TG-Claw
 
 ###  **当 AI 开始"黑箱操作"，你需要一双透视眼**
 
-[![CyberClaw](https://img.shields.io/badge/CyberClaw-1.0.0-purple.svg?logo=cyberpunk)](https://github.com/ttguy0707/CyberClaw)
+[![TG-Claw](https://img.shields.io/badge/CyberClaw-1.0.0-purple.svg?logo=cyberpunk)](https://github.com/ttguy0707/CyberClaw)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.x-blue.svg)](https://langchain-ai.github.io/langgraph/)
 [![LangChain](https://img.shields.io/badge/LangChain-1.x-blue.svg)](https://python.langchain.com/)
@@ -14,7 +14,7 @@
 [![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen.svg)](tests/)
 [![GitHub](https://img.shields.io/badge/GitHub-@ttguy0707-black.svg?logo=github)](https://github.com/ttguy0707)
 
-**下一代透明智能体架构** · Next-Gen Transparent Agent Architecture
+
 
 [快速开始](#-快速开始) · [核心能力](#-核心能力) · [架构图](#-系统架构) · [示例](#-基本用法)
 
@@ -24,13 +24,13 @@
 
 > 🤖 **你的 AI 在背着你做什么？CyberClaw 让所有行为无所遁形**
 > 
-> 💡 **灵感来源**：受 [OpenClaw](https://github.com/openclaw/openclaw) 的启发，CyberClaw 专注于解决 AI 智能体的透明度和可控性问题。
+> 💡 **灵感来源**：受 [OpenClaw](https://github.com/openclaw/openclaw) 的启发，TG-Claw 专注于解决 AI 智能体的透明度和可控性问题。
 
 ---
 
 ## 📖 简介
 
-CyberClaw 是一个**企业级透明可控智能体**，重新定义 AI 系统的可信边界：
+TG-Claw 是一个**企业级透明可控智能体**，重新定义 AI 系统的可信边界：
 
 - **🔍 白盒化决策** → 5 类事件审计 + JSONL 日志 + Rich 监控终端，所有行为可追溯
 - **🛡️ 零信任执行** → 两段式调用（help → run），先看说明书再执行，P0 级事故率降低 80%
@@ -39,7 +39,7 @@ CyberClaw 是一个**企业级透明可控智能体**，重新定义 AI 系统�
 
 ### 🔌 技能生态兼容
 
-CyberClaw 支持**OpenClaw 技能**和**Claude Code 技能**，可直接使用两个生态系统的丰富技能资源，无需重新开发。
+TG-Claw 支持**OpenClaw 技能**和**Claude Code 技能**，可直接使用两个生态系统的丰富技能资源，无需重新开发。
 
 ### 🌟 核心能力
 
@@ -134,8 +134,8 @@ CyberClaw 支持**OpenClaw 技能**和**Claude Code 技能**，可直接使用�
 
 ```bash
 # 克隆项目
-git clone https://github.com/ttguy0707/CyberClaw.git
-cd CyberClaw
+git clone https://github.com/Dorring/TG-Claw.git
+cd TG-Claw
 
 # 安装依赖并注册命令行工具（一步完成）
 pip install -e .
@@ -151,7 +151,7 @@ pip install -e .
 > pip install -e .
 > ```
 > 
-> 安装完成后，即可在任意目录使用 `cyberclaw` 命令。
+> 安装完成后，即可在任意目录使用 `tgclaw` 命令。
 
 ### 2️⃣ 配置
 
@@ -161,7 +161,7 @@ pip install -e .
 
 ```bash
 # 启动交互式配置向导
-cyberclaw config
+tgclaw config
 ```
 
 配置向导会引导你：
@@ -241,18 +241,18 @@ cyberclaw run
 
 ### ⏰ 心跳任务系统
 
-CyberClaw 内置心跳任务系统（Heartbeat），自动在后台执行定时任务：
+TG-Claw 内置心跳任务系统（Heartbeat），自动在后台执行定时任务：
 
 - **自动触发**：心跳进程每秒检查任务队列，到点自动触发
 - **循环任务**：支持 daily/weekly/monthly 循环模式
 - **任务持久化**：任务保存在 `workspace/tasks.json`，重启不丢失
-- **实时监控**：运行 `cyberclaw monitor` 可查看任务执行日志
+- **实时监控**：运行 `tgclaw monitor` 可查看任务执行日志
 
 **心跳任务示例：**
 ```bash
 # 创建循环任务
 > 每天早上 8 点提醒我喝水
-✅ 任务已加入队列 | 循环模式：daily | 首发时间：2026-04-07 08:00:00
+✅ 任务已加入队列 | 循环模式：daily | 首发时间：2026-04-30 08:00:00
 
 # 心跳系统会在每天 8:00 自动触发提醒
 ```
@@ -263,7 +263,7 @@ CyberClaw 内置心跳任务系统（Heartbeat），自动在后台执行定时�
 
 在另一个终端运行：
 ```bash
-cyberclaw monitor
+tgclaw monitor
 ```
 
 ![监控终端](docs/monitor.png)
@@ -329,19 +329,19 @@ cyberclaw monitor
 
 | 模块 | 文件 | 功能 |
 |------|------|------|
-| **Agent 循环** | `cyberclaw/core/agent.py` | LangGraph StateGraph，决策大脑 |
-| **技能加载** | `cyberclaw/core/skill_loader.py` | 动态加载 SKILL.md，两段式调用 |
-| **上下文管理** | `cyberclaw/core/context.py` | 消息修剪，双水位记忆 |
-| **内置工具** | `cyberclaw/core/tools/builtins.py` | 时间/计算/任务调度等 |
-| **沙盒工具** | `cyberclaw/core/tools/sandbox_tools.py` | 文件操作 + Shell 执行 |
-| **审计日志** | `cyberclaw/core/logger.py` | JSONL 格式事件记录 |
-| **心跳任务** | `cyberclaw/core/heartbeat.py` | 定时任务检查与触发 |
+| **Agent 循环** | `tgclaw/core/agent.py` | LangGraph StateGraph，决策大脑 |
+| **技能加载** | `tgclaw/core/skill_loader.py` | 动态加载 SKILL.md，两段式调用 |
+| **上下文管理** | `tgclaw/core/context.py` | 消息修剪，双水位记忆 |
+| **内置工具** | `tgclaw/core/tools/builtins.py` | 时间/计算/任务调度等 |
+| **沙盒工具** | `tgclaw/core/tools/sandbox_tools.py` | 文件操作 + Shell 执行 |
+| **审计日志** | `tgclaw/core/logger.py` | JSONL 格式事件记录 |
+| **心跳任务** | `tgclaw/core/heartbeat.py` | 定时任务检查与触发 |
 
 ### 项目结构
 
 ```
-CyberClaw/
-├── cyberclaw/                    # 核心包
+TG-Claw/
+├── tgclaw/                    # 核心包
 │   ├── core/
 │   │   ├── agent.py              # Agent 循环
 │   │   ├── config.py             # 配置管理
@@ -422,7 +422,7 @@ cp -r /path/to/skill workspace/office/skills/
 cd workspace/office/skills
 git clone https://github.com/.../skill-creator.git
 
-# 然后用自然语言让 CyberClaw 创建新技能
+# 然后用自然语言让 TG-Claw 创建新技能
 > 帮我创建一个查询比特币价格的技能
 ```
 
@@ -432,7 +432,7 @@ git clone https://github.com/.../skill-creator.git
 cd workspace/office/skills
 git clone https://github.com/.../skill-vetter.git
 
-# 让 CyberClaw 检查技能安全性
+# 让 TG-Claw 检查技能安全性
 > 帮我检查一下 weather 技能是否安全
 ```
 
@@ -487,7 +487,7 @@ curl "wttr.in/Beijing?format=3"
 
 在另一个终端运行：
 ```bash
-cyberclaw monitor
+tgclaw monitor
 ```
 
 实时查看：
@@ -606,8 +606,8 @@ python3 -c "from tests.test_two_phase_skills import run_tests; run_tests()"
 
 ```bash
 # 克隆项目
-git clone https://github.com/ttguy0707/CyberClaw.git
-cd CyberClaw
+git clone https://github.com/Dorring/TG-Claw
+cd TG-Claw
 
 # 创建虚拟环境
 python3 -m venv venv
@@ -638,31 +638,10 @@ MIT License
 ## 🙏 致谢
 
 - **[OpenClaw](https://github.com/openclaw/openclaw)** - 灵感来源与技能生态
+- **[CybelClaw](https://github.com/ttguy0707/CyberClaw)** - 项目基础来源
 - **LangChain** - LLM 应用开发框架
 - **LangGraph** - 有状态 Agent 构建
 - **Rich** - 终端美化
 - **Prompt Toolkit** - 交互式命令行
 - **所有贡献者** - 感谢你们的贡献！
-
 ---
-
-## 📬 联系方式
-
-- **GitHub**: [@ttguy0707](https://github.com/ttguy0707)
-- **邮箱**: thor07@126.com
-
----
-
-## ⭐ Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=ttguy0707/CyberClaw&type=Date)](https://star-history.com/#ttguy0707/CyberClaw&Date)
-
----
-
-<div align="center">
-
-**👾 CyberClaw · 下一代透明智能体架构**
-
-Made with ❤️ by [@ttguy0707](https://github.com/ttguy0707)
-
-</div>
