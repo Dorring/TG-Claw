@@ -166,8 +166,6 @@ tgclaw config
 3. 配置 Base URL（可选）
 4. **自动测试连接**，确保配置正确
 
-![配置向导](docs/config.png)
-
 #### 方式二：手动配置
 
 ```bash
