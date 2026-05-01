@@ -2,7 +2,7 @@
 
 ###  **当 AI 开始"黑箱操作"，你需要一双透视眼**
 
-[![TG-Claw](https://img.shields.io/badge/CyberClaw-1.0.0-purple.svg?logo=cyberpunk)](https://github.com/ttguy0707/CyberClaw)
+[![TG-Claw](https://img.shields.io/badge/tgclaw-1.0.0-purple.svg?logo=cyberpunk)](https://github.com/ttguy0707/tgclaw)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://python.org)
 [![LangGraph](https://img.shields.io/badge/LangGraph-1.x-blue.svg)](https://langchain-ai.github.io/langgraph/)
 [![LangChain](https://img.shields.io/badge/LangChain-1.x-blue.svg)](https://python.langchain.com/)
@@ -18,7 +18,7 @@
 
 ---
 
-> 🤖 **你的 AI 在背着你做什么？CyberClaw 让所有行为无所遁形**
+> 🤖 **你的 AI 在背着你做什么？tgclaw 让所有行为无所遁形**
 > 
 > 💡 **灵感来源**：受 [OpenClaw](https://github.com/openclaw/openclaw) 的启发，TG-Claw 专注于解决 AI 智能体的透明度和可控性问题。
 
@@ -115,7 +115,7 @@ TG-Claw 支持**OpenClaw 技能**和**Claude Code 技能**，可直接使用两�
 - **SKILL.md 规范**：每个技能包含完整说明书
 - **兼容 OpenClaw 和 Claude Code 技能**：可直接使用两个生态系统的技能
 - **推荐技能**：
-  - `skill-creator`：用自然语言让 CyberClaw 自己创建技能
+  - `skill-creator`：用自然语言让 tgclaw 自己创建技能
   - `skill-vetter`：检查技能的安全性
   - `mcporter`：连接外部 MCP (Model Context Protocol) 服务
   - `mcp-builder`：构建自己的 MCP 服务
@@ -200,15 +200,15 @@ OPENAI_API_BASE=https://coding.dashscope.aliyuncs.com/v1
 - `OPENAI_API_BASE`: 兼容接口的 Base URL（阿里云、腾讯云等）
 - `OLLAMA_BASE_URL`: Ollama 本地服务地址（默认 `http://localhost:11434`）
 
-> 💡 **工作区配置**：工作区路径已在代码中初始化，默认为项目根目录的 `workspace` 文件夹，无需在 `.env` 中配置。仅当需要自定义工作区位置时，才设置 `CYBERCLAW_WORKSPACE` 环境变量。
+> 💡 **工作区配置**：工作区路径已在代码中初始化，默认为项目根目录的 `workspace` 文件夹，无需在 `.env` 中配置。仅当需要自定义工作区位置时，才设置 `tgclaw_WORKSPACE` 环境变量。
 
-> 💡 提示：配置完成后，可运行 `cyberclaw run` 聊天测试连接是否正常。
+> 💡 提示：配置完成后，可运行 `tgclaw run` 聊天测试连接是否正常。
 
 ### 3️⃣ 运行
 
 ```bash
 # 启动主程序
-cyberclaw run
+tgclaw run
 ```
 
 ![欢迎界面](docs/welcome.png)
@@ -634,7 +634,7 @@ MIT License
 ## 🙏 致谢
 
 - **[OpenClaw](https://github.com/openclaw/openclaw)** - 灵感来源与技能生态
-- **[CybelClaw](https://github.com/ttguy0707/CyberClaw)** - 项目基础来源
+- **[CybelClaw](https://github.com/ttguy0707/tgclaw)** - 项目基础来源
 - **LangChain** - LLM 应用开发框架
 - **LangGraph** - 有状态 Agent 构建
 - **Rich** - 终端美化
